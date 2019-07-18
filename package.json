@@ -1,0 +1,28 @@
+{
+  "name": "thrift-node-pool",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "shx rm -rf ./dist && tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^10.0.0",
+    "husky": "^1.1.3",
+    "typescript": "^3.1.6",
+    "cross-env": "^5.2.0",
+    "shx": "^0.3.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "tsc"
+    }
+  },
+  "dependencies": {
+    "thrift": "^0.12.0"
+  }
+}
